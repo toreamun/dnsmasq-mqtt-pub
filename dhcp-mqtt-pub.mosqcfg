@@ -1,2 +1,18 @@
--h 192.168.1.16
--t unifi/dhcp/lease
+# See mosquitto_pub usage help or https://mosquitto.org/man/mosquitto_pub-1.html
+# for possible options. 
+#
+# Message is set by the scipt script, and as a result it it not possible to specify
+# -l, --stdin-line, -m, --message, -n, --null-message, -s and --stdin-file.
+#
+# Examples:
+
+# Specify the host to connect to. Defaults to localhost.
+# --host 192.168.1.2
+
+# Specify specify user, password, hostname, port and topic at once as a URL. 
+# The URL must be in the form: mqtt(s)://[username[:password]@]host[:port]/topic
+# --url mqqts://myuser:mypassword@myhost/mytopic
+
+# The MQTT topic on which to publish the message.
+# a defualt topic dnsmasq/lease is used if not specified here or by url option
+# --topic "my/topic"
