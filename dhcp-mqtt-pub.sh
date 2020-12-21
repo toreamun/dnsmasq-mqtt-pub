@@ -8,7 +8,7 @@ DEFUALT_TOPIC="dnsmasq/lease" # default topic if not set in mosqcfg
 argument_count=$#
 argument_values=("$@")
 for ((x = 1; x <= argument_count; x++)); do
-    export DNSMASQ_SCRIPT_ARG_$x="${argument_values[x - 1]}"
+    export DNSMASQ_SCRIPT_ARG$x="${argument_values[x - 1]}"
 done
 
 config_file="${BASH_SOURCE%.*}".mosqcfg
